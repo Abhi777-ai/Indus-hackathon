@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": false,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}// server.js
+const express = require("express");
+const app = express();
+
+app.use(express.json());
+
+// Example API
+app.get("/api/message", (req, res) => {
+    res.json({ message: "Hello from backend!" });
+});
+
+app.listen(5000, () => {
+    console.log("Server running on port 5000");
+});
