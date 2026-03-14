@@ -1,2 +1,8 @@
-This project is made  by my team on topic Core inventory .
-in which we provide service to the Owner of an Inventory so that they can monitor all the stats easily 
+# Indus-hackathon
+echo "# Indus-hackathon" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Abhi777-ai/Indus-hackathon.git
+git push -u origin main
